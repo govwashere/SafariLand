@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Discover wildlife, nature and adventure at SafariLand.">
+  <title>SafariLand | Nature Park</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bayon&family=Baskervville+SC&family=Irish+Grover&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="home-page">
+  <section class="home-hero" aria-labelledby="welcome-title">
+    <header class="home-header">
+      <a class="home-logo" href="index.html" aria-label="SafariLand home">
+        <img src="images/safariland-logo.png" alt="SafariLand Nature Park">
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      <nav id="main-nav" class="home-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="#park-info">Plan Your Visit</a>
+        <a href="attractions.html">Attractions</a>
+        <a href="park.html">The Park</a>
+        <a class="login-pill" href="#" data-placeholder-link>Buy Ticket</a>
+      </nav>
+    </header>
+
+    <div class="welcome-panel">
+      <h1 id="welcome-title">Welcome to<br><span>SafariLand</span></h1>
+      <p>Set by the river and surrounded by mountains, SafariLand is the<br class="desktop-break"> perfect place for family adventures.</p>
+      <a class="home-pill" href="#" data-placeholder-link>Buy Ticket</a>
+    </div>
+
+    <div class="hero-info-bar">
+      <div class="park-status">
+        <span class="open-indicator" aria-hidden="true"></span>
+        <p><strong>Park status: Open</strong><br>Close: 8 pm</p>
+      </div>
+      <a class="ticket-from" href="#" data-placeholder-link>
+        Tickets as from<br><strong>Rs 400</strong>
+      </a>
+    </div>
+  </section>
+
+  <main>
+    <section class="home-about" id="park-info">
+      <div class="about-copy">
+        <h2>More than a Park.</h2>
+        <h3>A Wild Adventure Awaits</h3>
+        <p>SafariLand brings together wildlife, adventure and nature in one unforgettable destination. Explore scenic trails, discover a stunning waterfall, and encounter incredible animals including lions, giraffes, elephants, monkeys, birds, and more.</p>
+        <p class="about-tags">Nature Trails · Waterfall · Kids Park · Wildlife Encounters</p>
+        <a class="green-pill" href="park.html">Read Our Story</a>
+      </div>
+      <div class="about-collage" aria-label="SafariLand nature and adventure">
+        <img class="collage-waterfall" src="images/waterfall.png" alt="Waterfall surrounded by forest">
+        <img class="collage-zipline" src="images/zipline-mountain.png" alt="Visitor ziplining above a mountain valley">
+        <img class="collage-giraffes" src="images/giraffes.png" alt="Two giraffes at SafariLand">
+      </div>
+    </section>
+
+    <section class="activities-feature">
+      <div class="activities-heading">
+        <h2>Fun For Everyone!</h2>
+        <p>Looking For some Thrills?</p>
+      </div>
+      <div class="activity-pair">
+        <article class="activity-preview">
+          <img src="images/zipline-activity.png" alt="Visitor riding a zipline through the forest">
+          <div>
+            <p>Experience the ultimate rush with a scenic zipline ride.</p>
+            <a class="green-pill" href="#" data-placeholder-link>More Details</a>
+          </div>
+        </article>
+        <article class="activity-preview">
+          <img src="images/karting.png" alt="Family enjoying a karting ride">
+          <div>
+            <p>Take the wheel and enjoy a fast-paced karting experience.</p>
+            <a class="green-pill" href="#" data-placeholder-link>More Details</a>
+          </div>
+        </article>
+      </div>
+      <a class="other-activities" href="attractions.html">Other Activities</a>
+    </section>
+
+    <section class="species-feature" id="animals">
+      <h2>Our Remarkable Species <span>- Get closer to wildlife</span></h2>
+      <div class="species-banner crocodile-banner">
+        <img src="images/lucy-crocodile.png" alt="Lucy the crocodile in the water">
+        <strong>Lucy The Crocodile</strong>
+      </div>
+      <div class="species-banner tortoise-banner">
+        <img src="images/tortoise.png" alt="A tortoise at SafariLand">
+        <strong>Animal Encounters</strong>
+      </div>
+      <a class="green-pill species-link" href="attractions.html?category=animals">Animal Encounters</a>
+    </section>
+
+    <section class="upcoming-section">
+      <h2>Upcoming Events</h2>
+      <article class="home-event">
+        <img src="images/halloween-event.png" alt="Halloween lights in a forest at night">
+        <div class="event-copy">
+          <p class="event-kicker">Special Event</p>
+          <h3>Halloween at SafariLand</h3>
+          <h4>A wildly spooky adventure awaits!</h4>
+          <p>Experience the magic of Halloween surrounded by nature. Enjoy festive decorations, exciting activities and unforgettable moments with family and friends.</p>
+          <p>Event Date: 31/10/26<br>Location: SafariLand</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="home-contact">
+      <div>
+        <h2>Contact us</h2>
+        <p>We'd love to hear from you! Plan your visit, ask a question or learn more about SafariLand.</p>
+      </div>
+      <div class="contact-actions">
+        <div class="contact-links">
+          <span class="contact-envelope" aria-hidden="true">✉</span>
+          <a href="mailto:hello@safariland.example">hello@safariland.example</a>
+          <a href="https://social.example/safariland" target="_blank" rel="noopener noreferrer">Social</a>
+        </div>
+        <a class="book-adventure" href="#" data-placeholder-link>Book Your Adventure</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="home-footer">
+    <span>© <span data-year></span> SafariLand Nature Park</span>
+  </footer>
+</body>
+</html>
