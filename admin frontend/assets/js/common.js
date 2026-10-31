@@ -71,7 +71,7 @@
     $form.find('[aria-invalid]').removeAttr('aria-invalid');
   };
 
-  /* ---------- Filtering (tabs + search boxes + status) ---------- */
+  /*Filtering (tabs + search boxes + status)*/
   SL.applyFilters = function () {
     var terms = $('.js-search').map(function () { return $.trim(this.value).toLowerCase(); }).get().filter(Boolean);
     var shown = 0;
@@ -99,7 +99,7 @@
       SL.applyFilters();
     });
 
-  /* ---------- CRUD helper (front-end only until the database step) ---------- */
+  /* CRUD helper (front-end only)*/
   SL.crud = function (cfg) {
     var $body = $(cfg.body), $form = $(cfg.form), $editing = null, $deleting = null;
 
@@ -127,7 +127,8 @@
     }
 
     $('.js-add').on('click', function () { openForm(this); });
-    $body.on('click', '.js-edit', function () { openForm(this, $(this).closest('tr')); });
+    $body.on('click', '.js-edit', function () {
+      openForm(this, $(this).closest('tr')); });
     $body.on('click', '.js-delete', function () {
       $deleting = $(this).closest('tr');
       SL.openModal(cfg.deleteModal, this);
@@ -160,7 +161,8 @@
         writeRow($editing, d);
       } else {
         d.id = 'new-' + Date.now();
-        var $tr = $(document.getElementById(cfg.template).content.firstElementChild.cloneNode(true));
+        var $tr = $(document.getElementById(cfg.template)
+          .content.firstElementChild.cloneNode(true));
         writeRow($tr, d);
         $tr.insertBefore($body.find('.empty-row'));
         bump(1);

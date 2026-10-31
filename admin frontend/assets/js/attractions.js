@@ -4,8 +4,13 @@ $(function () {
 
   SL.crud({
     noun: 'Attraction',
-    body: '#attractionRows', form: '#attractionForm', modal: 'attractionModal', title: '#attractionModalTitle',
-    deleteModal: 'deleteAttractionModal', template: 'attractionRowTpl', count: '#countAll',
+    body: '#attractionRows',
+    form: '#attractionForm',
+    modal: 'attractionModal',
+    title: '#attractionModalTitle',
+    deleteModal: 'deleteAttractionModal',
+    template: 'attractionRowTpl',
+    count: '#countAll',
     fields: ['name', 'category', 'price', 'minage', 'minheight', 'duration', 'status', 'description'],
     attrs:  ['id', 'name', 'category', 'price', 'minage', 'minheight', 'duration', 'status', 'description', 'image'],
     defaults: { status: 'Open' },

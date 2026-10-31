@@ -12,7 +12,7 @@
 <body>
 
 <header class="topbar">
-  <a class="brand" href="index.html">
+  <a class="brand" href="dashboard.html">
     <img src="assets/images/SafariLand_Toucan_Nature_Park_Logo.png" alt="SafariLand Nature Park">
   </a>
   <div class="topbar-main">
@@ -30,14 +30,13 @@
 <div class="shell">
   <nav class="sidebar" aria-label="Main">
     <ul>
-        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
         <li><a href="attractions.html" class="is-active" aria-current="page">Attraction</a></li>
         <li><a href="tickets.html">Ticket Type</a></li>
         <li><a href="events.html">Events</a></li>
         <li><a href="customers.html">Customer</a></li>
-        <li><a href="bookings.html">Bookings</a></li>
         <li><a href="settings.html">Settings</a></li>
-        <li><a href="index.html">Log out</a></li>
+        <li><a href="logout.html">Log out</a></li>
     </ul>
   </nav>
 
@@ -48,7 +47,7 @@
     </div>
 
     <div class="tabs" role="group" aria-label="Filter attractions">
-      <button type="button" class="tab js-filter-tab" data-filter="*" aria-pressed="true">All (<span id="countAll">12</span>)</button>
+      <button type="button" class="tab js-filter-tab" data-filter="*" aria-pressed="true">All (<span id="countAll">4</span>)</button>
       <button type="button" class="tab js-filter-tab" data-filter="Adventure" aria-pressed="false">Adventure</button>
       <button type="button" class="tab js-filter-tab" data-filter="Animal" aria-pressed="false">Animals</button>
     </div>
@@ -66,7 +65,10 @@
             </tr>
           </thead>
           <tbody id="attractionRows">
-        <tr data-row data-id="1" data-name="Karting" data-category="Adventure" data-price="450" data-status="Open" data-minage="8" data-minheight="120" data-duration="15" data-description="Gravity-powered karts on a downhill track." data-image="assets/images/karting.png">
+        <tr data-row data-id="1" data-name="Karting"
+            data-category="Adventure" data-price="450"
+            data-status="Open" data-minage="8" data-minheight="120"
+            data-duration="15" data-description="Gravity-powered karts on a downhill track." data-image="assets/images/karting.png">
           <td class="t-left">
             <div class="attr-cell">
               <img class="thumb" src="assets/images/karting.png" alt="Karting">
@@ -135,7 +137,7 @@
         </tr>
     </template>
 
-    <!-- Add / Edit Attraction -->
+    <! Add / Edit Attraction >
 <div class="modal-overlay" id="attractionModal" aria-hidden="true">
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="attractionModalTitle">
     <h2 id="attractionModalTitle">Add Attraction</h2>
@@ -174,7 +176,7 @@
           <label for="attImage">Image</label>
           <input id="attImage" type="file" name="image" accept="image/*">
         </div>
-        <div class="field field--full">
+        <div class="field fieldfull">
           <label for="attDescription">Description</label>
           <textarea id="attDescription" name="description" rows="3"></textarea>
         </div>
@@ -187,12 +189,12 @@
   </div>
 </div>
 
-    <!-- Delete Attraction -->
+    <! Delete Attraction >
 <div class="modal-overlay" id="deleteAttractionModal" aria-hidden="true">
-  <div class="modal modal--confirm" role="alertdialog" aria-modal="true" aria-labelledby="deleteAttractionModalTitle" aria-describedby="deleteAttractionModalText">
+  <div class="modal modalconfirm" role="alertdialog" aria-modal="true" aria-labelledby="deleteAttractionModalTitle" aria-describedby="deleteAttractionModalText">
     <h2 id="deleteAttractionModalTitle">Delete Attraction?</h2>
     <p id="deleteAttractionModalText">Are you sure you want to remove this attraction?</p>
-    <div class="modal-actions modal-actions--split">
+    <div class="modal-actions modal-actionssplit">
       <button type="button" class="btn btn-outline js-close">Cancel</button>
       <button type="button" class="btn btn-danger js-confirm-delete">Delete Attraction</button>
     </div>
