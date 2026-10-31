@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manage Attraction | SafariLand Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <img src="assets/images/SafariLand_Toucan_Nature_Park_Logo.png" alt="SafariLand Nature Park">
+  </a>
+  <div class="topbar-main">
+    <label class="pill-input search">
+      <span class="sr-only">Search this page</span>
+      <input type="search" class="js-search" id="globalSearch" placeholder="Search...">
+    </label>
+    <button type="button" class="icon-box" aria-label="Notifications">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9a6 6 0 0 1 12 0c0 6 2.5 7.5 2.5 7.5h-17S6 15 6 9"/><path d="M10 20a2 2 0 0 0 4 0"/></svg>
+    </button>
+    <div class="user"><span class="avatar" aria-hidden="true">A</span><span>Admin</span></div>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="sidebar" aria-label="Main">
+    <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="attractions.html" class="is-active" aria-current="page">Attraction</a></li>
+        <li><a href="tickets.html">Ticket Type</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="customers.html">Customer</a></li>
+        <li><a href="bookings.html">Bookings</a></li>
+        <li><a href="settings.html">Settings</a></li>
+        <li><a href="index.html">Log out</a></li>
+    </ul>
+  </nav>
+
+  <main class="content">
+    <div class="page-head">
+      <h1>Manage Attraction</h1>
+      <button type="button" class="btn btn-mint js-add">+ Add Attraction</button>
+    </div>
+
+    <div class="tabs" role="group" aria-label="Filter attractions">
+      <button type="button" class="tab js-filter-tab" data-filter="*" aria-pressed="true">All (<span id="countAll">12</span>)</button>
+      <button type="button" class="tab js-filter-tab" data-filter="Adventure" aria-pressed="false">Adventure</button>
+      <button type="button" class="tab js-filter-tab" data-filter="Animal" aria-pressed="false">Animals</button>
+    </div>
+
+    <div class="table-card">
+      <div class="table-scroll">
+        <table class="data">
+          <thead>
+            <tr>
+              <th scope="col" class="t-left">Attraction</th>
+              <th scope="col">Category</th>
+              <th scope="col">(Rs) Price</th>
+              <th scope="col">Status</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody id="attractionRows">
+        <tr data-row data-id="1" data-name="Karting" data-category="Adventure" data-price="450" data-status="Open" data-minage="8" data-minheight="120" data-duration="15" data-description="Gravity-powered karts on a downhill track." data-image="assets/images/karting.png">
+          <td class="t-left">
+            <div class="attr-cell">
+              <img class="thumb" src="assets/images/karting.png" alt="Karting">
+              <span class="c-name">Karting</span>
+            </div>
+          </td>
+          <td class="c-category">Adventure</td>
+          <td class="c-price">450</td>
+          <td class="c-status">Open</td>
+          <td class="actions"><button type="button" class="link-btn js-edit">Edit</button><span aria-hidden="true">/</span><button type="button" class="link-btn js-delete">Delete</button></td>
+        </tr>
+        <tr data-row data-id="2" data-name="Bird Avaries" data-category="Animal" data-price="300" data-status="Open" data-minage="0" data-minheight="0" data-duration="30" data-description="Walk-in aviary with feeding sessions." data-image="assets/images/bird_avaries.png">
+          <td class="t-left">
+            <div class="attr-cell">
+              <img class="thumb" src="assets/images/bird_avaries.png" alt="Bird Avaries">
+              <span class="c-name">Bird Avaries</span>
+            </div>
+          </td>
+          <td class="c-category">Animal</td>
+          <td class="c-price">300</td>
+          <td class="c-status">Open</td>
+          <td class="actions"><button type="button" class="link-btn js-edit">Edit</button><span aria-hidden="true">/</span><button type="button" class="link-btn js-delete">Delete</button></td>
+        </tr>
+        <tr data-row data-id="3" data-name="Nepalese Bridge" data-category="Adventure" data-price="450" data-status="Open" data-minage="8" data-minheight="120" data-duration="20" data-description="Suspended bridge across the valley." data-image="assets/images/nepalese_bridge.png">
+          <td class="t-left">
+            <div class="attr-cell">
+              <img class="thumb" src="assets/images/nepalese_bridge.png" alt="Nepalese Bridge">
+              <span class="c-name">Nepalese Bridge</span>
+            </div>
+          </td>
+          <td class="c-category">Adventure</td>
+          <td class="c-price">450</td>
+          <td class="c-status">Open</td>
+          <td class="actions"><button type="button" class="link-btn js-edit">Edit</button><span aria-hidden="true">/</span><button type="button" class="link-btn js-delete">Delete</button></td>
+        </tr>
+        <tr data-row data-id="4" data-name="Ziplining" data-category="Adventure" data-price="300" data-status="Open" data-minage="10" data-minheight="130" data-duration="30" data-description="Zip line over the tea-green slopes." data-image="assets/images/ziplining.png">
+          <td class="t-left">
+            <div class="attr-cell">
+              <img class="thumb" src="assets/images/ziplining.png" alt="Ziplining">
+              <span class="c-name">Ziplining</span>
+            </div>
+          </td>
+          <td class="c-category">Adventure</td>
+          <td class="c-price">300</td>
+          <td class="c-status">Open</td>
+          <td class="actions"><button type="button" class="link-btn js-edit">Edit</button><span aria-hidden="true">/</span><button type="button" class="link-btn js-delete">Delete</button></td>
+        </tr>
+        <tr class="empty-row" hidden><td colspan="5">No attractions match your search.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <template id="attractionRowTpl">
+        <tr data-row data-id="" data-name="" data-category="" data-price="" data-status="" data-minage="" data-minheight="" data-duration="" data-description="" data-image="">
+          <td class="t-left">
+            <div class="attr-cell">
+              <img class="thumb" src="" alt="">
+              <span class="c-name"></span>
+            </div>
+          </td>
+          <td class="c-category"></td>
+          <td class="c-price"></td>
+          <td class="c-status"></td>
+          <td class="actions"><button type="button" class="link-btn js-edit">Edit</button><span aria-hidden="true">/</span><button type="button" class="link-btn js-delete">Delete</button></td>
+        </tr>
+    </template>
+
+    <!-- Add / Edit Attraction -->
+<div class="modal-overlay" id="attractionModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="attractionModalTitle">
+    <h2 id="attractionModalTitle">Add Attraction</h2>
+    <form id="attractionForm" novalidate>
+      <input type="hidden" name="id">
+      <div class="form-grid">
+        <div class="field">
+          <label for="attName">Attraction Name</label>
+          <input id="attName" type="text" name="name" required>
+        </div>
+        <div class="field">
+          <label for="attCategory">Category</label>
+          <select id="attCategory" name="category" required><option value="">Select category</option><option value="Adventure">Adventure</option><option value="Animal">Animal</option></select>
+        </div>
+        <div class="field">
+          <label for="attMinage">Minimum Age (years)</label>
+          <input id="attMinage" type="number" name="minage" min="0">
+        </div>
+        <div class="field">
+          <label for="attMinheight">Minimum height (cm)</label>
+          <input id="attMinheight" type="number" name="minheight" min="0">
+        </div>
+        <div class="field">
+          <label for="attDuration">Duration (minutes)</label>
+          <input id="attDuration" type="number" name="duration" min="0">
+        </div>
+        <div class="field">
+          <label for="attPrice">Price (Rs)</label>
+          <input id="attPrice" type="number" name="price" required min="0">
+        </div>
+        <div class="field">
+          <label for="attStatus">Availability</label>
+          <select id="attStatus" name="status" required><option value="Open">Open</option><option value="Closed">Closed</option></select>
+        </div>
+        <div class="field">
+          <label for="attImage">Image</label>
+          <input id="attImage" type="file" name="image" accept="image/*">
+        </div>
+        <div class="field field--full">
+          <label for="attDescription">Description</label>
+          <textarea id="attDescription" name="description" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-outline js-close">Cancel</button>
+        <button type="submit" class="btn btn-primary">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+    <!-- Delete Attraction -->
+<div class="modal-overlay" id="deleteAttractionModal" aria-hidden="true">
+  <div class="modal modal--confirm" role="alertdialog" aria-modal="true" aria-labelledby="deleteAttractionModalTitle" aria-describedby="deleteAttractionModalText">
+    <h2 id="deleteAttractionModalTitle">Delete Attraction?</h2>
+    <p id="deleteAttractionModalText">Are you sure you want to remove this attraction?</p>
+    <div class="modal-actions modal-actions--split">
+      <button type="button" class="btn btn-outline js-close">Cancel</button>
+      <button type="button" class="btn btn-danger js-confirm-delete">Delete Attraction</button>
+    </div>
+  </div>
+</div>
+
+  </main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/attractions.js"></script>
+</body>
+</html>

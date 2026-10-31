@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | SafariLand Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <img src="assets/images/SafariLand_Toucan_Nature_Park_Logo.png" alt="SafariLand Nature Park">
+  </a>
+  <div class="topbar-main">
+    <label class="pill-input search">
+      <span class="sr-only">Search this page</span>
+      <input type="search" class="js-search" id="globalSearch" placeholder="Search...">
+    </label>
+    <button type="button" class="icon-box" aria-label="Notifications">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9a6 6 0 0 1 12 0c0 6 2.5 7.5 2.5 7.5h-17S6 15 6 9"/><path d="M10 20a2 2 0 0 0 4 0"/></svg>
+    </button>
+    <div class="user"><span class="avatar" aria-hidden="true">A</span><span>Admin</span></div>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="sidebar" aria-label="Main">
+    <ul>
+        <li><a href="index.html" class="is-active" aria-current="page">Dashboard</a></li>
+        <li><a href="attractions.html">Attraction</a></li>
+        <li><a href="tickets.html">Ticket Type</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="customers.html">Customer</a></li>
+        <li><a href="bookings.html">Bookings</a></li>
+        <li><a href="settings.html">Settings</a></li>
+        <li><a href="index.html">Log out</a></li>
+    </ul>
+  </nav>
+
+  <main class="content">
+    <div class="page-head">
+      <div>
+        <h1>Dashboard</h1>
+        <p class="lede">Welcome back! Here’s what’s happening</p>
+      </div>
+      <div class="date-card"><span>Date:</span><span id="todayDate">15 October 2026</span></div>
+    </div>
+
+    <section class="stats" aria-label="Summary">
+      <article class="stat-card">
+        <h2>Total Bookings</h2>
+        <p class="stat-value">248</p>
+        <p class="stat-note">+12% from last week</p>
+      </article>
+      <article class="stat-card">
+        <h2>Total Customers</h2>
+        <p class="stat-value">342</p>
+        <p class="stat-note">+12% from last week</p>
+      </article>
+      <article class="stat-card">
+        <h2>Upcoming Events</h2>
+        <p class="stat-value">2</p>
+        <p class="stat-note">1 this month</p>
+      </article>
+    </section>
+
+    <div class="dash-lower">
+      <section class="panel" aria-labelledby="recentTitle">
+        <div class="panel-head">
+          <h2 id="recentTitle">Recent Bookings</h2>
+          <a class="panel-link" href="bookings.html">View all →</a>
+        </div>
+        <div class="table-scroll">
+          <table class="data data--compact">
+            <thead>
+              <tr>
+                <th scope="col" class="t-left">#</th>
+                <th scope="col" class="t-left">Customer</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Date</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="t-left">#3021</td>
+                <td class="t-left">John Pierre</td>
+                <td>4</td>
+                <td>15/10/26</td>
+                <td>Paid</td>
+              </tr>
+              <tr>
+                <td class="t-left">#3020</td>
+                <td class="t-left">Sarah Khan</td>
+                <td>2</td>
+                <td>14/10/26</td>
+                <td>Paid</td>
+              </tr>
+              <tr>
+                <td class="t-left">#3019</td>
+                <td class="t-left">John Newman</td>
+                <td>3</td>
+                <td>14/10/26</td>
+                <td>Paid</td>
+              </tr>
+              <tr>
+                <td class="t-left">#3018</td>
+                <td class="t-left">Joshua Van</td>
+                <td>1</td>
+                <td>13/10/26</td>
+                <td>Paid</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="quickTitle">
+        <div class="panel-head"><h2 id="quickTitle">Quick Action</h2></div>
+        <div class="quick-list">
+          <a class="quick-btn" href="attractions.html?add=1">Add Attraction</a>
+          <a class="quick-btn" href="events.html">Create Event</a>
+          <a class="quick-btn" href="tickets.html">Manage Tickets</a>
+          <a class="quick-btn" href="customers.html">View Customer</a>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="assets/js/common.js"></script>
+</body>
+</html>

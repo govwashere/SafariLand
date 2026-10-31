@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manage Ticket Type | SafariLand Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <img src="assets/images/SafariLand_Toucan_Nature_Park_Logo.png" alt="SafariLand Nature Park">
+  </a>
+  <div class="topbar-main">
+    <label class="pill-input search">
+      <span class="sr-only">Search this page</span>
+      <input type="search" class="js-search" id="globalSearch" placeholder="Search...">
+    </label>
+    <button type="button" class="icon-box" aria-label="Notifications">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9a6 6 0 0 1 12 0c0 6 2.5 7.5 2.5 7.5h-17S6 15 6 9"/><path d="M10 20a2 2 0 0 0 4 0"/></svg>
+    </button>
+    <div class="user"><span class="avatar" aria-hidden="true">A</span><span>Admin</span></div>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="sidebar" aria-label="Main">
+    <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="attractions.html">Attraction</a></li>
+        <li><a href="tickets.html" class="is-active" aria-current="page">Ticket Type</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="customers.html">Customer</a></li>
+        <li><a href="bookings.html">Bookings</a></li>
+        <li><a href="settings.html">Settings</a></li>
+        <li><a href="index.html">Log out</a></li>
+    </ul>
+  </nav>
+
+  <main class="content">
+    <div class="page-head">
+      <h1>Manage Ticket Type</h1>
+      <button type="button" class="btn btn-mint js-add">+ Add Ticket Type</button>
+    </div>
+
+    <div class="table-card table-card--spaced">
+      <div class="table-scroll">
+        <table class="data">
+          <thead>
+            <tr>
+              <th scope="col" class="t-left">Ticket Type</th>
+              <th scope="col" class="t-left">Description</th>
+              <th scope="col">(Rs) Price</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody id="ticketRows">
+        <tr data-row data-id="1" data-name="General Pass" data-price="400" data-guests="1" data-description="Access 1 person&#10;Wildlife viewing&#10;Kids Park&#10;1 bird avairy">
+          <td class="t-left c-name">General Pass</td>
+          <td class="t-left"><ul class="plain-list c-desc"><li>Access 1 person</li><li>Wildlife viewing</li><li>Kids Park</li><li>1 bird avairy</li></ul></td>
+          <td class="c-price">400</td>
+          <td class="actions"><button type="button" class="link-btn js-edit">Edit</button><span aria-hidden="true">/</span><button type="button" class="link-btn js-delete">Delete</button></td>
+        </tr>
+        <tr data-row data-id="2" data-name="Family Pass" data-price="2250" data-guests="4" data-description="General pass activities&#10;Park Access 4 persons&#10;Big cat Drive Thru">
+          <td class="t-left c-name">Family Pass</td>
+          <td class="t-left"><ul class="plain-list c-desc"><li>General pass activities</li><li>Park Access 4 persons</li><li>Big cat Drive Thru</li></ul></td>
+          <td class="c-price">2250</td>
+          <td class="actions"><button type="button" class="link-btn js-edit">Edit</button><span aria-hidden="true">/</span><button type="button" class="link-btn js-delete">Delete</button></td>
+        </tr>
+        <tr data-row data-id="3" data-name="VIP Pass" data-price="1800" data-guests="1" data-description="VIP Access 1 person&#10;Feed baby Crocodile&#10;Nepalese Bridge&#10;2 Ziplines&#10;Walk with Lion">
+          <td class="t-left c-name">VIP Pass</td>
+          <td class="t-left"><ul class="plain-list c-desc"><li>VIP Access 1 person</li><li>Feed baby Crocodile</li><li>Nepalese Bridge</li><li>2 Ziplines</li><li>Walk with Lion</li></ul></td>
+          <td class="c-price">1800</td>
+          <td class="actions"><button type="button" class="link-btn js-edit">Edit</button><span aria-hidden="true">/</span><button type="button" class="link-btn js-delete">Delete</button></td>
+        </tr>
+        <tr class="empty-row" hidden><td colspan="4">No ticket types match your search.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <template id="ticketRowTpl">
+        <tr data-row data-id="" data-name="" data-price="" data-guests="" data-description="">
+          <td class="t-left c-name"></td>
+          <td class="t-left"><ul class="plain-list c-desc"></ul></td>
+          <td class="c-price"></td>
+          <td class="actions"><button type="button" class="link-btn js-edit">Edit</button><span aria-hidden="true">/</span><button type="button" class="link-btn js-delete">Delete</button></td>
+        </tr>
+    </template>
+
+    <!-- Add / Edit Ticket -->
+<div class="modal-overlay" id="ticketModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="ticketModalTitle">
+    <h2 id="ticketModalTitle">Add Ticket</h2>
+    <form id="ticketForm" novalidate>
+      <input type="hidden" name="id">
+      <div class="form-grid">
+        <div class="field">
+          <label for="tkName">Ticket Type</label>
+          <input id="tkName" type="text" name="name" required>
+        </div>
+        <div class="field">
+          <label for="tkPrice">Price (Rs)</label>
+          <input id="tkPrice" type="number" name="price" required min="0">
+        </div>
+        <div class="field">
+          <label for="tkDescription">Description (one item per line)</label>
+          <textarea id="tkDescription" name="description" rows="3" required></textarea>
+        </div>
+        <div class="field">
+          <label for="tkGuests">Included Guest</label>
+          <input id="tkGuests" type="number" name="guests" required min="1">
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-outline js-close">Cancel</button>
+        <button type="submit" class="btn btn-primary">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+    <!-- Delete Ticket -->
+<div class="modal-overlay" id="deleteTicketModal" aria-hidden="true">
+  <div class="modal modal--confirm" role="alertdialog" aria-modal="true" aria-labelledby="deleteTicketModalTitle" aria-describedby="deleteTicketModalText">
+    <h2 id="deleteTicketModalTitle">Delete Ticket?</h2>
+    <p id="deleteTicketModalText">Are you sure you want to remove this Ticket?</p>
+    <div class="modal-actions modal-actions--split">
+      <button type="button" class="btn btn-outline js-close">Cancel</button>
+      <button type="button" class="btn btn-danger js-confirm-delete">Delete Ticket</button>
+    </div>
+  </div>
+</div>
+
+  </main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/tickets.js"></script>
+</body>
+</html>
