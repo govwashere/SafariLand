@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafariLand – Booking History</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="logo" href="my-tickets.html"><img src="assets/logo.png" alt="SafariLand Nature Park" /></a>
+    <div class="topbar-content">
+      <input class="search" type="text" placeholder="Search..." />
+      <div class="topbar-right">
+        <a class="btn-book" href="park-tickets.html">Book Tickets</a>
+        <a class="avatar avatar-blank" href="my-profile.html" aria-label="Profile"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4.2"/><path d="M3.5 22c0-4.7 3.8-8 8.5-8s8.5 3.3 8.5 8z"/></svg></a>
+        <span class="username">John Pierre</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="sidebar">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="my-tickets.html">My Tickets</a>
+      <a href="booking-history.html" class="active">Booking History</a>
+      <a href="#">My review</a>
+      <a href="my-profile.html">My Profile</a>
+      <a href="#">Log out</a>
+    </nav>
+
+    <main class="main has-hero">
+      <div class="hero">
+        <img src="assets/hero-giraffe.png" alt="Giraffe at sunrise" />
+      </div>
+
+      <h1 class="title">Booking History</h1>
+
+      <div class="table-card">
+        <table class="history">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Booking Reference</th>
+              <th>Item</th>
+              <th>Amount</th>
+              <th>Status</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>15 Oct 2026</td>
+              <td>SL-2026-00230</td>
+              <td>VIP Pass</td>
+              <td>1800</td>
+              <td>-</td>
+              <td><a class="view-link" href="#">View Details</a></td>
+            </tr>
+            <tr>
+              <td>15 Oct 2026</td>
+              <td>SL-2026-00231</td>
+              <td>General Pass</td>
+              <td>400</td>
+              <td>-</td>
+              <td><a class="view-link" href="#">View Details</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

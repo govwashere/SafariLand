@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafariLand – My Profile</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="logo" href="my-tickets.html"><img src="assets/logo.png" alt="SafariLand Nature Park" /></a>
+    <div class="topbar-content">
+      <input class="search" type="text" placeholder="Search..." />
+      <div class="topbar-right">
+        <a class="btn-book" href="park-tickets.html">Book Tickets</a>
+        <a class="avatar avatar-blank" id="topbar-avatar" href="my-profile.html" aria-label="Profile picture"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4.2"/><path d="M3.5 22c0-4.7 3.8-8 8.5-8s8.5 3.3 8.5 8z"/></svg></a>
+        <span class="username" id="topbar-name">John Pierre</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="sidebar">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="my-tickets.html">My Tickets</a>
+      <a href="booking-history.html">Booking History</a>
+      <a href="#">My review</a>
+      <a href="my-profile.html" class="active">My Profile</a>
+      <a href="#">Log out</a>
+    </nav>
+
+    <main class="main">
+      <h1 class="title">My Profile</h1>
+      <p class="subtitle">Manage your personal information and account settings.</p>
+
+      <div class="profile-grid">
+
+        <!-- Personal information -->
+        <section class="card">
+          <div class="card-head">
+            <h2>Personal Information</h2>
+            <button type="button" class="btn-small" id="edit-btn">Edit</button>
+          </div>
+
+          <form id="personal-form">
+            <div class="field-group">
+              <label for="fullname">Full Name</label>
+              <input class="field" id="fullname" type="text" value="John Pierre" readonly />
+            </div>
+            <div class="field-group">
+              <label for="email">Email</label>
+              <input class="field" id="email" type="email" value="jp@gmail.com" readonly />
+            </div>
+            <div class="field-group">
+              <label for="phone">Phone Number</label>
+              <input class="field" id="phone" type="tel" value="+230 5712 3456" readonly />
+            </div>
+            <div class="field-group">
+              <label for="dob">Date Of Birth</label>
+              <input class="field" id="dob" type="date" value="1995-08-14" readonly />
+            </div>
+            <div class="field-group">
+              <label for="address">Address</label>
+              <input class="field" id="address" type="text" value="24 Royal Road, Rose Hill" readonly />
+            </div>
+          </form>
+        </section>
+
+        <div class="profile-side">
+
+          <!-- Profile picture -->
+          <section class="card">
+            <h2>Profile Picture</h2>
+            <div class="photo-row">
+              <div class="big-avatar avatar-blank" id="profile-avatar"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4.2"/><path d="M3.5 22c0-4.7 3.8-8 8.5-8s8.5 3.3 8.5 8z"/></svg></div>
+              <button type="button" class="btn-photo">Change Photo</button>
+              <input type="file" id="photo-input" accept="image/*" hidden />
+            </div>
+          </section>
+
+          <!-- Password -->
+          <section class="card">
+            <form id="password-form">
+              <div class="pw-row">
+                <label for="current-pw">Current Password</label>
+                <input class="field" id="current-pw" type="password" />
+              </div>
+              <div class="pw-row">
+                <label for="new-pw">New Password</label>
+                <input class="field" id="new-pw" type="password" />
+              </div>
+              <div class="pw-row">
+                <label for="confirm-pw">Confirm Password</label>
+                <input class="field" id="confirm-pw" type="password" />
+              </div>
+              <p class="form-msg" id="pw-msg" role="status"></p>
+              <div class="card-actions">
+                <button type="submit" class="btn-small">Save Changes</button>
+              </div>
+            </form>
+          </section>
+
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

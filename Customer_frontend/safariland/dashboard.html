@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafariLand – Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="logo" href="my-tickets.html"><img src="assets/logo.png" alt="SafariLand Nature Park" /></a>
+    <div class="topbar-content">
+      <input class="search" type="text" placeholder="Search..." />
+      <div class="topbar-right">
+        <a class="btn-book" href="park-tickets.html">Book Tickets</a>
+        <a class="avatar avatar-blank" href="my-profile.html" aria-label="Profile"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4.2"/><path d="M3.5 22c0-4.7 3.8-8 8.5-8s8.5 3.3 8.5 8z"/></svg></a>
+        <span class="username">John Pierre</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="sidebar">
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="my-tickets.html">My Tickets</a>
+      <a href="booking-history.html">Booking History</a>
+      <a href="#">My review</a>
+      <a href="my-profile.html">My Profile</a>
+      <a href="#">Log out</a>
+    </nav>
+
+    <main class="main">
+
+      <!-- Welcome banner -->
+      <section class="dash-hero">
+        <img src="assets/hero-dashboard.png" alt="Savanna landscape with a giraffe and a waterfall" />
+        <div class="dash-hero-text">
+          <h1>Welcome Back!</h1>
+          <p>We're delighted to see you again at SafariLand. Your next adventure, amazing experiences and unforgettable moments are just around the corner!</p>
+        </div>
+      </section>
+
+      <!-- Quick links -->
+      <section class="quick-grid">
+        <a class="quick-card" href="park-tickets.html">
+          <h3>Buy Tickets</h3>
+          <p>Book your next adventure</p>
+        </a>
+        <a class="quick-card" href="booking-history.html">
+          <h3>Bookings</h3>
+          <p>View and manage your tickets</p>
+        </a>
+        <a class="quick-card" href="#">
+          <h3>Plan Visit</h3>
+          <p>Park info, maps and facilities</p>
+        </a>
+        <a class="quick-card" href="#">
+          <h3>Explore Events</h3>
+          <p>See what's coming to SafariLand</p>
+        </a>
+      </section>
+
+      <!-- Announcements + events -->
+      <section class="dash-panels">
+        <div class="panel announcements">
+          <div class="panel-head">
+            <h2>Announcements</h2>
+            <a href="#">View all →</a>
+          </div>
+          <article class="announce">
+            <img src="assets/announcement-giraffe.png" alt="Giraffe" />
+            <div class="announce-text">
+              <h3>New Animal Encounter Zone Opening Soon!</h3>
+              <p>Get closer to nature with our exciting new encounters.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="panel events">
+          <div class="panel-head">
+            <h2>Upcoming Events</h2>
+            <a href="#">View all →</a>
+          </div>
+          <ul class="event-list">
+            <li>
+              <div class="event-date"><span>31</span><span>Oct</span></div>
+              <img src="assets/event-halloween.png" alt="Halloween at SafariLand" />
+              <span class="event-name">Halloween at SafariLand</span>
+            </li>
+            <li>
+              <div class="event-date"><span>31</span><span>Dec</span></div>
+              <img src="assets/event-newyear.png" alt="New Year Eve fireworks" />
+              <span class="event-name">New Year Eve at SafariLand</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>

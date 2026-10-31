@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafariLand – Park Tickets</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="checkout-header">
+    <div class="ch-left">
+      <a href="my-tickets.html"><img src="assets/logo.png" alt="SafariLand Nature Park" /></a>
+      <a class="btn-back" href="my-tickets.html">Back</a>
+    </div>
+    <div class="ch-right">
+      <div class="ch-top">
+        <input class="search" type="text" placeholder="Search..." />
+        <div class="topbar-right">
+          <a class="btn-book" href="park-tickets.html">Book Tickets</a>
+          <a class="avatar avatar-blank" href="my-profile.html" aria-label="Profile"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4.2"/><path d="M3.5 22c0-4.7 3.8-8 8.5-8s8.5 3.3 8.5 8z"/></svg></a>
+          <span class="username">John Pierre</span>
+        </div>
+      </div>
+
+      <ol class="stepper">
+        <li class="step done"><span class="dot">1</span><span class="label">Tickets</span></li>
+        <li class="step-line" aria-hidden="true"></li>
+        <li class="step"><span class="dot">2</span><span class="label">Payment</span></li>
+        <li class="step-line" aria-hidden="true"></li>
+        <li class="step"><span class="dot">3</span><span class="label">Confirmation</span></li>
+      </ol>
+    </div>
+  </header>
+
+  <main class="checkout-main">
+    <div class="pt-head">
+      <h1 class="title">Park Tickets</h1>
+      <div class="pt-hero">
+        <img src="assets/hero-zebras.png" alt="Zebras on the savanna at sunset" />
+      </div>
+    </div>
+
+    <div class="pass-grid">
+      <div class="pass-card">
+        <div class="ticket general">
+          <div class="body"><img src="assets/logo.png" alt="SafariLand" /></div>
+          <div class="stub"><span>General Pass</span></div>
+        </div>
+        <div class="qty" data-pass="general">
+          <button type="button" class="minus" aria-label="Remove one General Pass">−</button>
+          <input type="text" value="0" readonly aria-label="General Pass quantity" />
+          <button type="button" class="plus" aria-label="Add one General Pass">+</button>
+        </div>
+      </div>
+
+      <div class="pass-card">
+        <div class="ticket family">
+          <div class="body"><img src="assets/logo.png" alt="SafariLand" /></div>
+          <div class="stub"><span>Family pass</span></div>
+        </div>
+        <div class="qty" data-pass="family">
+          <button type="button" class="minus" aria-label="Remove one Family Pass">−</button>
+          <input type="text" value="0" readonly aria-label="Family Pass quantity" />
+          <button type="button" class="plus" aria-label="Add one Family Pass">+</button>
+        </div>
+      </div>
+
+      <div class="pass-card">
+        <div class="ticket vip">
+          <div class="body"><img src="assets/logo.png" alt="SafariLand" /></div>
+          <div class="stub"><span>Vip Pass</span></div>
+        </div>
+        <div class="qty" data-pass="vip">
+          <button type="button" class="minus" aria-label="Remove one VIP Pass">−</button>
+          <input type="text" value="0" readonly aria-label="VIP Pass quantity" />
+          <button type="button" class="plus" aria-label="Add one VIP Pass">+</button>
+        </div>
+      </div>
+    </div>
+
+    <p class="msg-error" id="pass-error" hidden>Please choose at least one ticket to continue.</p>
+
+    <div class="actions">
+      <a class="btn-primary" id="continue" href="payment.html">Continue to Payment</a>
+    </div>
+  </main>
+
+  <script src="assets/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
